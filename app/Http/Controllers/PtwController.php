@@ -273,14 +273,14 @@ class PtwController extends Controller
      */
     public function destroy(Ptw $ptw)
     {
-        $trainings = Training::find(Auth()->user()->id)
+        $trainings = Training::where('user_id', Auth()->user()->id)
                                 ->where('ptw_id', $ptw->id)
                                 ->get();
         $trainings->each(function($training){
             $training->delete();
         });
 
-        $basic_licenses = BasicLicense::find(Auth()->user()->id)
+        $basic_licenses = BasicLicense::where('user_id', Auth()->user()->id)
                                         ->where('ptw_id', $ptw->id)
                                         ->get();
         $basic_licenses->each(function($basic_license){

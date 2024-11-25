@@ -63,5 +63,17 @@ php artisan migrate
 8. Seed the Database
 
 ```
+php artisan db:seed
+```
+
+9. Create the symbolic link
+
+```
+php artisan storage:link
+```
+
+10. Serve the application
+
+```
 php artisan serve
 ```
