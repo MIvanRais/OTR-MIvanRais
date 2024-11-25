@@ -62,6 +62,19 @@ php artisan migrate
 
 8. Seed the Database
 
+**Note:** The password for all accounts is set to "password."
+
+There are four roles: Admin, Engineer, PIC, and Quality Inspector.
+
+There are:
+
+-   1 Admin account
+-   2 Engineer account
+-   2 PIC account
+-   2 Quality Inspector account
+
+To log in, refer to the `users` table in your local database, as the data is generated using the Faker library.
+
 ```
 php artisan db:seed
 ```
